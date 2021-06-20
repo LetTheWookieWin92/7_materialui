@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 //Components
-import NavigationBar from "./navigationBar";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import OptionCard from "./optionCard";
@@ -56,12 +55,8 @@ const useStyles = makeStyles((theme) => ({
 export default function CenteredGrid() {
 	const classes = useStyles();
 
-	let displayMode = "Home";
-
 	return (
 		<React.Fragment>
-			<NavigationBar title={"Home"} />
-
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
 					<h1 className="sectionText">Inputs</h1>
