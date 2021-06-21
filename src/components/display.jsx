@@ -15,7 +15,6 @@ class Display extends Component {
 		this.changeDisplayMode = this.changeDisplayMode.bind(this);
 	}
 	
-
 	changeDisplayMode(mode) {
 		this.setState({ displayMode: mode });
 		console.log(mode);
@@ -25,12 +24,12 @@ class Display extends Component {
 		return (
 			<React.Fragment>
 				<NavigationBar title={this.state.displayMode} />
-				{this.state.displayMode == "Home" && (
+				{this.state.displayMode === "Home" && (
 					<div>
 						<Home onSelection={this.changeDisplayMode} />
 					</div>
 				)}
-				{this.state.displayMode == "Button" && (
+				{this.state.displayMode === "Button" && (
 					<div>
 						<ButtonExample onBackPress={this.changeDisplayMode} />
 					</div>
