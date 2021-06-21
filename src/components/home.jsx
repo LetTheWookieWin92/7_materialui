@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import OptionCard from "./optionCard";
+import Button from '@material-ui/core/Button';
 
 //Style
 import "../style/home.css";
@@ -50,10 +51,19 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 	},
+	optionButton: {
+		margin: 10,
+        padding: 5,
+        width: "calc(100% - 20px)",
+        height: "calc(100% - 20px)",
+        textAlign: "center",
+        overflow: "hidden"
+	}
 }));
 
-export default function CenteredGrid() {
+export default function Home(props) {
 	const classes = useStyles();
+	
 
 	return (
 		<React.Fragment>
@@ -62,7 +72,8 @@ export default function CenteredGrid() {
 					<h1 className="sectionText">Inputs</h1>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<OptionCard text={"Button"} image={<TouchApp />} />
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Button")}} startIcon={<TouchApp />}>Button</Button>
+					
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<OptionCard text={"Button Group"} image={<GroupWork />} />

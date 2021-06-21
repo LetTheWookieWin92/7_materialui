@@ -6,12 +6,19 @@ import NavigationBar from "./navigationBar";
 import ButtonExample from "./examples/buttonExample";
 
 class Display extends Component {
-	state = {
-		displayMode: "Home",
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			displayMode: "Home",
+		};
+
+		this.changeDisplayMode = this.changeDisplayMode.bind(this);
+	}
+	
 
 	changeDisplayMode(mode) {
 		this.setState({ displayMode: mode });
+		console.log(mode);
 	}
 
 	render() {
