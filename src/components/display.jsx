@@ -17,20 +17,20 @@ class Display extends Component {
 	
 	changeDisplayMode(mode) {
 		this.setState({ displayMode: mode });
-		console.log(mode);
 	}
 
 	render() {
 		return (
 			<React.Fragment>
-				<NavigationBar title={this.state.displayMode} />
 				{this.state.displayMode === "Home" && (
 					<div>
+						<NavigationBar textLabel="MaterialUI Elements" showBack="No"/>
 						<Home onSelection={this.changeDisplayMode} />
 					</div>
 				)}
 				{this.state.displayMode === "Button" && (
 					<div>
+						<NavigationBar textLabel="Button" showBack="Yes" backPressed={this.changeDisplayMode}/>
 						<ButtonExample onBackPress={this.changeDisplayMode} />
 					</div>
 				)}
