@@ -23,16 +23,16 @@ class Display extends Component {
 		return (
 			<React.Fragment>
 				{this.state.displayMode === "Home" && (
-					<div>
+					<React.Fragment>
 						<NavigationBar textLabel="MaterialUI Elements" showBack="No"/>
 						<Home onSelection={this.changeDisplayMode} />
-					</div>
+					</React.Fragment>
 				)}
 				{this.state.displayMode === "Button" && (
-					<div>
+					<React.Fragment>
 						<NavigationBar textLabel="Button" showBack="Yes" backPressed={this.changeDisplayMode}/>
-						<ButtonExample onBackPress={this.changeDisplayMode} />
-					</div>
+						<ButtonExample onBackPress={this.changeDisplayMode}/>
+					</React.Fragment>
 				)}
 			</React.Fragment>
 		);
