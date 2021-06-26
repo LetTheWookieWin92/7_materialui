@@ -1,19 +1,42 @@
 import React, { Component } from "react";
-import { Paper } from "@material-ui/core";
+import ExampleSection from "./exampleSection";
+import { withStyles } from "@material-ui/styles";
 
 //Style
-import "../../style/example.css"
+import "../../style/example.css";
+import { Button } from "@material-ui/core";
+
+const useStyles = theme => ({
+	buttonSpacing: {
+		margin: '10px'
+	}
+});
 
 class ButtonExample extends Component {
-	state = {};
-	render() {
-		return <React.Fragment>
-			<h1 className="sectionTitle">Contained buttons</h1>
-			<p className="sectionText">Used for high emphasis, primary actions within the app.</p>
-			<Paper className="displayBox">hi</Paper>
+	state = { containedButtonText: "Press a button" }
 
-		</React.Fragment>;
+	render() { 
+		const { classes } = this.props;
+		return ( 
+			<React.Fragment>
+			
+			<ExampleSection title="Contained buttons" description="Used for high emphasis, primary actions within the app." content=
+			{
+				<React.Fragment>
+					<Button variant="contained" className={classes.buttonSpacing}>Default</Button>
+					<Button variant="contained" className={classes.buttonSpacing} color="primary">Primary</Button>
+					<Button variant="contained" className={classes.buttonSpacing} color="secondary">Secondary</Button>
+					<Button variant="contained" className={classes.buttonSpacing} disabled>Disabled</Button>
+				</React.Fragment>
+				
+			}/>
+			<ExampleSection title="Text buttons" description="Used for lower emphasis actions, such as those found in dialogues or cards. Making use of these helps maintain the emphasis of the primary content" content=""/>
+
+		</React.Fragment>
+		 );
 	}
 }
+ 
+export default withStyles(useStyles)(ButtonExample);
 
-export default ButtonExample;
+
