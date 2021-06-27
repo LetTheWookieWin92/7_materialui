@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import ExampleSection from "./exampleSection";
 import { withStyles } from "@material-ui/styles";
+import { Button } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 //Style
 import "../../style/example.css";
-import { Button } from "@material-ui/core";
 
 const useStyles = theme => ({
 	buttonSpacing: {
@@ -12,11 +13,10 @@ const useStyles = theme => ({
 	}
 });
 
+//Text button example
 const textButtonDescriptors = ["great", "good", "fine", "bad", "awful"];
 const textButtonConnector = ["are", "aren't"];
 const textButtonSubjects = ["Apples", "Carrots", "Blueberries"];
-
-
 
 class ButtonExample extends Component {
 	state = { 
@@ -24,9 +24,11 @@ class ButtonExample extends Component {
 		containedButtonPresses: 1,
 		containedButtonType: "none",
 
+		outlinedButtonColour: "Blue",
+
 		textButtonText: "Press a button",
 		textButtonTextState: [0,0,0]
- }
+ 	}
 
 	containedButtonPressed(button) {
 		if(button === this.state.containedButtonType)
@@ -44,6 +46,11 @@ class ButtonExample extends Component {
 		}
 	}
 
+	outlinedButtonPressed(button) {
+		let outlinedButtonColour = button;
+		this.setState({outlinedButtonColour});
+	}
+
 	textButtonPressed(button) {
 
 		let textButtonTextState = this.state.textButtonTextState;
@@ -51,21 +58,23 @@ class ButtonExample extends Component {
 
 		if(button === "Default")
 		{
-			textButtonTextState[0] = (textButtonTextState[0] == 2) ? 0 : ++textButtonTextState[0];
+			textButtonTextState[0] = (textButtonTextState[0] === 2) ? 0 : ++textButtonTextState[0];
 		}
 		else if(button === "Primary")
 		{
-			textButtonTextState[1] = (textButtonTextState[1] == 1) ? 0 : ++textButtonTextState[1];
+			textButtonTextState[1] = (textButtonTextState[1] === 1) ? 0 : ++textButtonTextState[1];
 		}
 		else
 		{
-			textButtonTextState[2] = (textButtonTextState[2] == 4) ? 0 : ++textButtonTextState[2];
+			textButtonTextState[2] = (textButtonTextState[2] === 4) ? 0 : ++textButtonTextState[2];
 		}
 
 		textButtonText = textButtonSubjects[textButtonTextState[0]] + " " + textButtonConnector[textButtonTextState[1]] + " " + textButtonDescriptors[textButtonTextState[2]];
 
 		this.setState({textButtonText, textButtonTextState});
 	}
+
+
 
 	render() { 
 		const { classes } = this.props;
@@ -79,6 +88,17 @@ class ButtonExample extends Component {
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.containedButtonPressed("Primary")} color="primary">Primary</Button>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.containedButtonPressed("Secondary")} color="secondary">Secondary</Button>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.containedButtonPressed("Disabled")} disabled>Disabled</Button>
+					</React.Fragment>
+					
+				}/>
+				<ExampleSection title="Outlined buttons" description="Used for medium emphasis actions, not as important as primary actions but more important than text actions." content=
+				{
+					<React.Fragment>
+						<Box margin="auto" borderRadius="50%" color="blue" bgcolor={this.state.outlinedButtonColour} width="40px" height="40px" marginBottom="20px"/>
+						<Button variant="outlined" className={classes.buttonSpacing} onClick={ () => this.outlinedButtonPressed("Blue")}>Default</Button>
+						<Button variant="outlined" className={classes.buttonSpacing} onClick={ () => this.outlinedButtonPressed("Green")} color="primary">Primary</Button>
+						<Button variant="outlined" className={classes.buttonSpacing} onClick={ () => this.outlinedButtonPressed("Red")} color="secondary">Secondary</Button>
+						<Button variant="outlined" className={classes.buttonSpacing} onClick={ () => this.outlinedButtonPressed("Disabled")} disabled>Disabled</Button>
 					</React.Fragment>
 					
 				}/>
