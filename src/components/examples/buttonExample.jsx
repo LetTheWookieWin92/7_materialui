@@ -3,6 +3,7 @@ import ExampleSection from "./exampleSection";
 import { withStyles } from "@material-ui/styles";
 import { Button } from "@material-ui/core";
 import { Box } from "@material-ui/core";
+import NavigationBar from "../navigationBar";
 
 //Style
 import "../../style/example.css";
@@ -99,6 +100,7 @@ class ButtonExample extends Component {
 		const { classes } = this.props;
 		return ( 
 			<React.Fragment>
+				<NavigationBar textLabel="Button" showBack="Yes" backPressed={this.props.onBackPress}/>
 				<ExampleSection title="Contained buttons" description="Used for high emphasis, primary actions within the app." content=
 				{
 					<React.Fragment>
@@ -138,7 +140,7 @@ class ButtonExample extends Component {
 						<p>{this.state.iconButtonText}</p>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Primary")} startIcon={<TouchApp />} color="primary">Post</Button>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Secondary")} startIcon={<TouchApp />} color="secondary">Save draft</Button>
-						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Default")} startIcon={<TouchApp />} color="error">Discard</Button>
+						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Default")} startIcon={<TouchApp />} color="default">Discard</Button>
 						
 					</React.Fragment>
 					
