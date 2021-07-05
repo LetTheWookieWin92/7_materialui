@@ -6,6 +6,7 @@ import { Box } from "@material-ui/core";
 
 //Style
 import "../../style/example.css";
+import { TouchApp } from "@material-ui/icons";
 
 const useStyles = theme => ({
 	buttonSpacing: {
@@ -27,7 +28,11 @@ class ButtonExample extends Component {
 		outlinedButtonColour: "Blue",
 
 		textButtonText: "Press a button",
-		textButtonTextState: [0,0,0]
+		textButtonTextState: [0,0,0],
+
+		iconButtonText: "Press a button",
+		iconButtonPresses: 1,
+		iconButtonType: "none",
  	}
 
 	containedButtonPressed(button) {
@@ -74,7 +79,21 @@ class ButtonExample extends Component {
 		this.setState({textButtonText, textButtonTextState});
 	}
 
-
+	iconButtonPressed(button) {
+		if(button === this.state.iconButtonType)
+		{
+			let iconButtonPresses = this.state.iconButtonPresses +1;
+			let iconButtonText = button + " button has been pressed " + iconButtonPresses + " times";
+			this.setState({iconButtonPresses, iconButtonText});
+		}
+		else
+		{
+			let iconButtonType = button;
+			let iconButtonPresses = 1;
+			let iconButtonText = button + " button has been pressed " + iconButtonPresses + " times";
+			this.setState({iconButtonPresses, iconButtonText, iconButtonType});
+		}
+	}
 
 	render() { 
 		const { classes } = this.props;
@@ -110,6 +129,17 @@ class ButtonExample extends Component {
 						<Button className={classes.buttonSpacing} onClick={ () => this.textButtonPressed("Primary")} color="primary">Primary</Button>
 						<Button className={classes.buttonSpacing} onClick={ () => this.textButtonPressed("Secondary")} color="secondary">Secondary</Button>
 						<Button className={classes.buttonSpacing} onClick={ () => this.textButtonPressed("Disabled")} disabled>Disabled</Button>
+					</React.Fragment>
+					
+				}/>
+				<ExampleSection title="Icon & Label buttons" description="These can be used to enhance the UX of any of the previous types of button by adding an icon. Icons are quicker to recognise than text." content=
+				{
+					<React.Fragment>
+						<p>{this.state.iconButtonText}</p>
+						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Primary")} startIcon={<TouchApp />} color="primary">Post</Button>
+						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Secondary")} startIcon={<TouchApp />} color="secondary">Save draft</Button>
+						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Default")} startIcon={<TouchApp />} color="error">Discard</Button>
+						
 					</React.Fragment>
 					
 				}/>
