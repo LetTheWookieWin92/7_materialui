@@ -44,6 +44,7 @@ import {
 	ToggleOn,
 	Textsms,
 	List,
+	Style,
 } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -66,6 +67,14 @@ export default function Home(props) {
 
 	return (
 		<React.Fragment>
+			<Grid container spacing={0}>
+				<Grid item xs={12}>
+					<h1 className="sectionText">Theming</h1>
+				</Grid>
+				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
+					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("How theme works")}} startIcon={<Style />}>How theme works</Button>
+				</Grid>
+			</Grid>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
 					<h1 className="sectionText">Inputs</h1>
