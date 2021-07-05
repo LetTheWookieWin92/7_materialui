@@ -1,6 +1,7 @@
 import React from "react";
 
 //Components
+import NavigationBar from "./navigationBar";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from '@material-ui/core/Button';
@@ -66,7 +67,9 @@ export default function Home(props) {
 	
 
 	return (
+		
 		<React.Fragment>
+			<NavigationBar textLabel="MaterialUI" showBack="No"/>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
 					<h1 className="sectionText">Theming</h1>

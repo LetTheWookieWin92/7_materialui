@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 // Components
 import Home from "./home";
-import NavigationBar from "./navigationBar";
 import ButtonExample from "./examples/buttonExample";
+import ContentMissing from "./examples/contentMissing";
 
 //Theme
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -45,21 +45,26 @@ class Display extends Component {
 		this.setState({ displayMode: mode });
 	}
 
+	renderDisplayMode(mode) {
+
+		switch (mode) {
+			case 'Home':
+				return <Home onSelection={this.changeDisplayMode} />
+
+			case 'Button':
+				return <ButtonExample onBackPress={this.changeDisplayMode} />
+		
+			default:
+				return <ContentMissing onBackPress={this.changeDisplayMode} />
+		}
+	}
+
 	render() {
 		return (
 			<ThemeProvider theme={theme}>
-				{this.state.displayMode === "Home" && (
-					<React.Fragment>
-						<NavigationBar textLabel="MaterialUI Elements" showBack="No"/>
-						<Home onSelection={this.changeDisplayMode} />
-					</React.Fragment>
-				)}
-				{this.state.displayMode === "Button" && (
-					<React.Fragment>
-						<NavigationBar textLabel="Button" showBack="Yes" backPressed={this.changeDisplayMode}/>
-						<ButtonExample onBackPress={this.changeDisplayMode}/>
-					</React.Fragment>
-				)}
+			
+				{this.renderDisplayMode(this.state.displayMode)}
+
 			</ThemeProvider>
 		);
 	}
