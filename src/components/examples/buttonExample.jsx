@@ -143,7 +143,6 @@ class ButtonExample extends Component {
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Default")} startIcon={<TouchApp />} color="default">Discard</Button>
 						
 					</React.Fragment>
-					
 				}/>
 
 			</React.Fragment>

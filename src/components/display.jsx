@@ -6,30 +6,8 @@ import ButtonExample from "./examples/buttonExample";
 import ContentMissing from "./examples/contentMissing";
 
 //Theme
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-
-const theme = createMuiTheme({
-	palette: {
-	  primary: {
-		light: '#5e7597',
-		main: '#314a69',
-		dark: '#00233e',
-		contrastText: '#ffffff',
-	  },
-	  secondary: {
-		light: '#987d5b',
-		main: '#695131',
-		dark: '#3c2909',
-		contrastText: '#ffffff',
-	  },
-	  warning:{
-		light: '#ffb74d',
-		main: '#ff9800',
-		dark: '#f57c00',
-		contrastText: '#ffffff',
-	  },
-	},
-  });
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "./theme";
 
 class Display extends Component {
 	constructor(props) {
@@ -62,7 +40,6 @@ class Display extends Component {
 	render() {
 		return (
 			<ThemeProvider theme={theme}>
-			
 				{this.renderDisplayMode(this.state.displayMode)}
 
 			</ThemeProvider>
