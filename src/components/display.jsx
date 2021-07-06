@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Home from "./home";
 import ButtonExample from "./examples/buttonExample";
 import ContentMissing from "./examples/contentMissing";
+import HowThemeWorksExample from "./examples/howThemeWorksExample";
 
 //Theme
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -29,11 +30,14 @@ class Display extends Component {
 			case 'Home':
 				return <Home onSelection={this.changeDisplayMode} />
 
+			case 'How theme works':
+				return <HowThemeWorksExample title={mode} onBackPress={this.changeDisplayMode} />
+
 			case 'Button':
-				return <ButtonExample onBackPress={this.changeDisplayMode} />
+				return <ButtonExample title={mode} onBackPress={this.changeDisplayMode} />
 		
 			default:
-				return <ContentMissing onBackPress={this.changeDisplayMode} />
+				return <ContentMissing  title={mode} onBackPress={this.changeDisplayMode} />
 		}
 	}
 
@@ -41,7 +45,6 @@ class Display extends Component {
 		return (
 			<ThemeProvider theme={theme}>
 				{this.renderDisplayMode(this.state.displayMode)}
-
 			</ThemeProvider>
 		);
 	}

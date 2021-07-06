@@ -100,7 +100,7 @@ class ButtonExample extends Component {
 		const { classes } = this.props;
 		return ( 
 			<React.Fragment>
-				<NavigationBar textLabel="Button" showBack="Yes" backPressed={this.props.onBackPress}/>
+				<NavigationBar textLabel={this.props.title} showBack="Yes" backPressed={this.props.onBackPress}/>
 				<ExampleSection title="Contained buttons" description="Used for high emphasis, primary actions within the app." content=
 				{
 					<React.Fragment>
