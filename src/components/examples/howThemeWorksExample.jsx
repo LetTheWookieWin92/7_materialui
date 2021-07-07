@@ -12,6 +12,8 @@ import { makeStyles } from '@material-ui/styles';
 import colorTool from './../../img/ColorTool.PNG';
 import colourPicker from './../../img/ColourPicker.PNG';
 import themeComponent from './../../img/ThemeComponent.PNG';
+import ThemeProvider from './../../img/ThemeProvider.PNG';
+import CustomThemeStyles from './../../img/CustomThemeStyles.png';
 
 const useStyles = makeStyles(theme => ({
     imgFitting: {
@@ -52,19 +54,31 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     </Grid>
                 </Grid>
             }/>
-            <ExampleSection title="3. Implement the ThemeProvider" description=" " content=
+            <ExampleSection title="3. Implement the ThemeProvider" description="ThemeProvider is what you use to inject the theme into your application." content=
             {
-                <React.Fragment>
-                    
-                </React.Fragment>
-                
+                <Grid container spacing={0} >
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
+                        <img src={ThemeProvider} className={classes.imgFitting} alt="Content Missing"/>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <p className="displayBoxText">To add the theme to your app, wrap the top-level element of the app in the ThemeProvider tags. If you've imported the theme component from step 2, your theme should now flow down through the rest of your component tree.</p>
+                        
+                    </Grid>
+                </Grid>
             }/>
-            <ExampleSection title="4. Apply custom styles" description=" " content=
+            <ExampleSection title="4. Apply custom styles" description="Custom styles can be added to functional components using the makeStyles hook." content=
             {
-                <React.Fragment>
-                    
-                </React.Fragment>
-                
+                <Grid container spacing={0} >
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
+                        <img src={CustomThemeStyles} className={classes.imgFitting} alt="Content Missing"/>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <p className="displayBoxText">You might need to add custom styles to a certain component, or apply the existing palette to components that can't access them.</p>
+                        <p className="displayBoxText">Import the makeStyles hook and create the style you need. In the example here, we had already defined the warning palette and we're just linking to it.</p>
+                        <p className="displayBoxText">Implement the custom style by creating an instance of the makeStyles method and accessing the style under className.</p>
+                        
+                    </Grid>
+                </Grid>
             }/>
         </React.Fragment>
      );
