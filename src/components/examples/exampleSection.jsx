@@ -9,7 +9,7 @@ import "../../style/example.css"
 const ExampleSection = ({ title, description, content }) => {
 	return ( 
 	<React.Fragment>
-		<h1 className="sectionTitle">{title}</h1>
+		<h2 className="sectionTitle">{title}</h2>
 		<p className="sectionText">{description}</p>
 		<Paper className="displayBox">{content}</Paper>
 		<Divider className="sectionDivider" />
