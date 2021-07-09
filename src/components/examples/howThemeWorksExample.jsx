@@ -100,7 +100,18 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                 </AccordionDetails>
             </Accordion>
 
+            <Accordion>
+            <AccordionSummary
+                    expandIcon={<ExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <p>Typography</p>
+                </AccordionSummary>
+                <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
 
+                </AccordionDetails>
+            </Accordion>
             
             
         </React.Fragment>
