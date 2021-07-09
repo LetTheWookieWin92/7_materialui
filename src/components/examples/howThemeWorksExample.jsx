@@ -101,7 +101,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
             </Accordion>
 
             <Accordion>
-            <AccordionSummary
+                <AccordionSummary
                     expandIcon={<ExpandMore />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
@@ -112,7 +112,71 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
 
                 </AccordionDetails>
             </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <p>Spacing</p>
+                </AccordionSummary>
+                <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
+
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <p>Breakpoints</p>
+                </AccordionSummary>
+                <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
+
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <p>Density</p>
+                </AccordionSummary>
+                <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
+
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <p>z-index</p>
+                </AccordionSummary>
+                <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
+
+                </AccordionDetails>
+            </Accordion>
             
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMore />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <p>Globals</p>
+                </AccordionSummary>
+                <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
+
+                </AccordionDetails>
+            </Accordion>
             
         </React.Fragment>
      );
