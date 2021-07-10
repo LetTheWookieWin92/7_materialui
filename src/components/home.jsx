@@ -70,7 +70,7 @@ export default function Home(props) {
 		
 		<React.Fragment>
 			<NavigationBar textLabel="MaterialUI" showBack="No"/>
-			<Grid container spacing={0}>
+			<Grid container spacing={0} style={{maxWidth: 1920}}>
 				<Grid item xs={12}>
 					<h1 className="sectionText">Theming</h1>
 				</Grid>
@@ -78,7 +78,7 @@ export default function Home(props) {
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("How theme works")}} startIcon={<Style />}>How theme works</Button>
 				</Grid>
 			</Grid>
-			<Grid container spacing={0}>
+			<Grid container spacing={0} style={{maxWidth: 1920}}>
 				<Grid item xs={12}>
 					<h1 className="sectionText">Inputs</h1>
 				</Grid>

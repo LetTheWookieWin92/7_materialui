@@ -16,6 +16,9 @@ import colourPicker from './../../img/ColourPicker.PNG';
 import themeComponent from './../../img/ThemeComponent.PNG';
 import ThemeProvider from './../../img/ThemeProvider.PNG';
 import CustomThemeStyles from './../../img/CustomThemeStyles.png';
+import TypographyImg from './../../img/Typography.PNG';
+import TypographyImplement from './../../img/TypographyImplement.PNG';
+import TypographyOutcome from './../../img/TypographyOutcome.PNG';
 
 const useStyles = makeStyles(theme => ({
     imgFitting: {
@@ -109,7 +112,32 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     <p>Typography</p>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
-
+                    <Grid container spacing={0} alignItems="center">
+                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                <ExampleSection title="1. Decide on your font variants" description="Pick a font family, and modify the variants in the theme.jsx. Responsive font sizes automate the sizing of variants at each breakpoint, in line with defined rem units. Variants will scale more or less depending on the rem unit. " content=
+                                {
+                                    <Grid container spacing={0} alignItems="center">
+                                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                            <img src={TypographyImg} className={classes.imgFitting} alt="Content Missing"/>
+                                            <p>Setting variants in theme.jsx</p>
+                                        </Grid>
+                                    </Grid>
+                                }/>
+                                <ExampleSection title="2. Implement using the typography tags" description="Use the typography tags throughout your app to apply a consistent theme throughout." content=
+                                {
+                                    <Grid container spacing={0} alignItems="center">
+                                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
+                                            <img src={TypographyImplement} className={classes.imgFitting} alt="Content Missing"/>
+                                            <p>Adding the tags within the app</p>
+                                        </Grid>
+                                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
+                                            <img src={TypographyOutcome} className={classes.imgFitting} alt="Content Missing"/>
+                                            <p>Outcome</p>
+                                        </Grid>
+                                    </Grid>
+                                }/>
+                            </Grid>
+                    </Grid>
                 </AccordionDetails>
             </Accordion>
 
