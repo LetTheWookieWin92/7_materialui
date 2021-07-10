@@ -4,7 +4,7 @@ import React from 'react';
 import NavigationBar from "../navigationBar";
 import ExampleSection from './exampleSection';
 import Grid from "@material-ui/core/Grid";
-import { Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core';
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 
 //Style
@@ -34,14 +34,13 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
         <React.Fragment>
             
             <NavigationBar textLabel={title} showBack="Yes" backPressed={onBackPress}/>
-            <h1 className="sectionTitle">How theme works</h1>
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMore />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <p>Implementing a colour palette</p>
+                    <Typography variant="h5">Implementing a colour palette</Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
                     <Grid container spacing={0} alignItems="center">
@@ -51,11 +50,11 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                                     <Grid container spacing={0} alignItems="center">
                                         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
                                             <img src={colourPicker} className={classes.imgFitting} alt="Content Missing"/>
-                                            <p>Colour picker</p>
+                                            <Typography variant="body2" style={{textAlign: 'center'}}>Colour picker</Typography>
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
                                             <img src={colorTool} className={classes.imgFitting} alt="Content Missing"/>
-                                            <p>Color tool</p>
+                                            <Typography variant="body2" style={{textAlign: 'center'}}>Color tool</Typography>
                                         </Grid>
                                     </Grid>
                                 }/>
@@ -64,11 +63,12 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                                 <Grid container spacing={0} >
                                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
                                         <img src={themeComponent} className={classes.imgFitting} alt="Content Missing"/>
+                                        <Typography variant="body2" style={{textAlign: 'center'}}>theme.jsx</Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                                        <p className="displayBoxText">You can define primary, secondary, error, warning, info and success palette colours. Each has main, light, dark and contrastText values but if you omit light, dark and contrastText then these will be calculated from the main value.</p>
-                                        <p className="displayBoxText">Some components, such as Button, can't access all of the defined palette colours. In that case, you should define a custom style and set the properties equal to those defined in the theme colour palette (see step 4).</p>
-                                        <p className="displayBoxText">Import the theme component wherever you intend to implement the ThemeProvider (see step 3).</p>
+                                        <Typography variant="body1">You can define primary, secondary, error, warning, info and success palette colours. Each has main, light, dark and contrastText values but if you omit light, dark and contrastText then these will be calculated from the main value.</Typography>
+                                        <Typography variant="body1">Some components, such as Button, can't access all of the defined palette colours. In that case, you should define a custom style and set the properties equal to those defined in the theme colour palette (see step 4).</Typography>
+                                        <Typography variant="body1">Import the theme component wherever you intend to implement the ThemeProvider (see step 3).</Typography>
                                     </Grid>
                                 </Grid>
                             }/>
@@ -77,9 +77,10 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                                 <Grid container spacing={0} >
                                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
                                         <img src={ThemeProvider} className={classes.imgFitting} alt="Content Missing"/>
+                                        <Typography variant="body2" style={{textAlign: 'center'}}>ThemeProvider tag</Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                                        <p className="displayBoxText">To add the theme to your app, wrap the top-level element of the app in the ThemeProvider tags. If you've imported the theme component from step 2, your theme should now flow down through the rest of your component tree.</p>
+                                        <Typography variant="body1">To add the theme to your app, wrap the top-level element of the app in the ThemeProvider tags. If you've imported the theme component from step 2, your theme should now flow down through the rest of your component tree.</Typography>
                                         
                                     </Grid>
                                 </Grid>
@@ -89,11 +90,12 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                                 <Grid container spacing={0} >
                                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
                                         <img src={CustomThemeStyles} className={classes.imgFitting} alt="Content Missing"/>
+                                        <Typography variant="body2" style={{textAlign: 'center'}}>Applying custom styles using makeStyles hook</Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                                        <p className="displayBoxText">You might need to add custom styles to a certain component, or apply the existing palette to components that can't access them.</p>
-                                        <p className="displayBoxText">Import the makeStyles hook and create the style you need. In the example here, we had already defined the warning palette and we're just linking to it.</p>
-                                        <p className="displayBoxText">Implement the custom style by creating an instance of the makeStyles method and accessing the style under className.</p>
+                                        <Typography variant="body1">You might need to add custom styles to a certain component, or apply the existing palette to components that can't access them.</Typography>
+                                        <Typography variant="body1">Import the makeStyles hook and create the style you need. In the example here, we had already defined the warning palette and we're just linking to it.</Typography>
+                                        <Typography variant="body1">Implement the custom style by creating an instance of the makeStyles method and accessing the style under className.</Typography>
                                         
                                     </Grid>
                                 </Grid>
@@ -109,7 +111,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <p>Typography</p>
+                    <Typography variant="h5">Typography</Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
                     <Grid container spacing={0} alignItems="center">
@@ -119,7 +121,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                                     <Grid container spacing={0} alignItems="center">
                                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                                             <img src={TypographyImg} className={classes.imgFitting} alt="Content Missing"/>
-                                            <p>Setting variants in theme.jsx</p>
+                                            <Typography variant="body2" style={{textAlign: 'center'}}>Setting variants in theme.jsx</Typography>
                                         </Grid>
                                     </Grid>
                                 }/>
@@ -128,11 +130,11 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                                     <Grid container spacing={0} alignItems="center">
                                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
                                             <img src={TypographyImplement} className={classes.imgFitting} alt="Content Missing"/>
-                                            <p>Adding the tags within the app</p>
+                                            <Typography variant="body2" style={{textAlign: 'center'}}>Adding the tags within the app</Typography>
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} alignItems="center">
                                             <img src={TypographyOutcome} className={classes.imgFitting} alt="Content Missing"/>
-                                            <p>Outcome</p>
+                                            <Typography variant="body2" style={{textAlign: 'center'}}>Outcome</Typography>
                                         </Grid>
                                     </Grid>
                                 }/>
@@ -147,7 +149,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <p>Spacing</p>
+                    <Typography variant="h5">Spacing</Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
 
@@ -160,7 +162,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <p>Breakpoints</p>
+                    <Typography variant="h5">Breakpoints</Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
 
@@ -173,7 +175,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <p>Density</p>
+                    <Typography variant="h5">Density</Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
 
@@ -186,7 +188,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <p>z-index</p>
+                    <Typography variant="h5">z-index</Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
 
@@ -199,7 +201,7 @@ const HowThemeWorksExample = ({title, onBackPress}) => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <p>Globals</p>
+                    <Typography variant="h5">Globals</Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{backgroundColor: "#f5f5f6"}}>
 

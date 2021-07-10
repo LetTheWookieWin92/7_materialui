@@ -6,9 +6,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from '@material-ui/core/Button';
 
-//Style
-import "../style/home.css";
-
 //Icons
 import {
 	TouchApp,
@@ -47,6 +44,7 @@ import {
 	List,
 	Style,
 } from "@material-ui/icons";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -70,17 +68,17 @@ export default function Home(props) {
 		
 		<React.Fragment>
 			<NavigationBar textLabel="MaterialUI" showBack="No"/>
-			<Grid container spacing={0} style={{maxWidth: 1920}}>
+			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Theming</h1>
+					<Typography variant="h1">Theme</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("How theme works")}} startIcon={<Style />}>How theme works</Button>
 				</Grid>
 			</Grid>
-			<Grid container spacing={0} style={{maxWidth: 1920}}>
+			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Inputs</h1>
+					<Typography variant="h1">Inputs</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Button")}} startIcon={<TouchApp />}>Button</Button>
@@ -118,7 +116,7 @@ export default function Home(props) {
 			</Grid>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Navigation</h1>
+					<Typography variant="h1">Navigation</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Bottom Navigation")}} startIcon={<Navigation />}>Bottom Navigation</Button>
@@ -144,7 +142,7 @@ export default function Home(props) {
 			</Grid>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Surfaces</h1>
+					<Typography variant="h1">Surfaces</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Card")}} startIcon={<ViewCarousel />}>Card</Button>
@@ -155,7 +153,7 @@ export default function Home(props) {
 			</Grid>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Feedback</h1>
+					<Typography variant="h1">Feedback</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Progress")}} startIcon={<Autorenew />}>Progress</Button>
@@ -172,7 +170,7 @@ export default function Home(props) {
 			</Grid>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Data Display</h1>
+					<Typography variant="h1">Data Display</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Avatar")}} startIcon={<AccountCircle />}>Avatar</Button>
@@ -204,7 +202,7 @@ export default function Home(props) {
 			</Grid>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Utils</h1>
+					<Typography variant="h1">Utils</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Click Away Listener")}} startIcon={<Hearing />}>Click Away Listener</Button>
@@ -221,7 +219,7 @@ export default function Home(props) {
 			</Grid>
 			<Grid container spacing={0}>
 				<Grid item xs={12}>
-					<h1 className="sectionText">Lab</h1>
+					<Typography variant="h1">Lab</Typography>
 					<p className="sectionText">To be added...</p>
 				</Grid>
 			</Grid>

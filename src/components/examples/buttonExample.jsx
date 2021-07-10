@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ExampleSection from "./exampleSection";
 import { withStyles } from "@material-ui/styles";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import { Box } from "@material-ui/core";
 import NavigationBar from "../navigationBar";
 
@@ -104,7 +104,7 @@ class ButtonExample extends Component {
 				<ExampleSection title="Contained buttons" description="Used for high emphasis, primary actions within the app." content=
 				{
 					<React.Fragment>
-						<p>{this.state.containedButtonText}</p>
+						<Typography variant="body1" style={{ textAlign: 'center'}}>{this.state.containedButtonText}</Typography>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.containedButtonPressed("Default")}>Default</Button>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.containedButtonPressed("Primary")} color="primary">Primary</Button>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.containedButtonPressed("Secondary")} color="secondary">Secondary</Button>
@@ -126,7 +126,7 @@ class ButtonExample extends Component {
 				<ExampleSection title="Text buttons" description="Used for lower emphasis actions, such as those found in dialogues or cards. Making use of these helps maintain the emphasis of the primary content" content=
 				{
 					<React.Fragment>
-						<p>{this.state.textButtonText}</p>
+						<Typography variant="body1" style={{ textAlign: 'center'}}>{this.state.textButtonText}</Typography>
 						<Button className={classes.buttonSpacing} onClick={ () => this.textButtonPressed("Default")}>Default</Button>
 						<Button className={classes.buttonSpacing} onClick={ () => this.textButtonPressed("Primary")} color="primary">Primary</Button>
 						<Button className={classes.buttonSpacing} onClick={ () => this.textButtonPressed("Secondary")} color="secondary">Secondary</Button>
@@ -137,7 +137,7 @@ class ButtonExample extends Component {
 				<ExampleSection title="Icon & Label buttons" description="These can be used to enhance the UX of any of the previous types of button by adding an icon. Icons are quicker to recognise than text." content=
 				{
 					<React.Fragment>
-						<p>{this.state.iconButtonText}</p>
+						<Typography variant="body1" style={{ textAlign: 'center'}}>{this.state.iconButtonText}</Typography>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Primary")} startIcon={<TouchApp />} color="primary">Post</Button>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Secondary")} startIcon={<TouchApp />} color="secondary">Save draft</Button>
 						<Button variant="contained" className={classes.buttonSpacing} onClick={ () => this.iconButtonPressed("Default")} startIcon={<TouchApp />} color="default">Discard</Button>
