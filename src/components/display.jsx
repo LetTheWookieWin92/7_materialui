@@ -9,7 +9,6 @@ import HowThemeWorksExample from "./examples/howThemeWorksExample";
 //Theme
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme";
-import { Typography } from "@material-ui/core";
 
 class Display extends Component {
 	constructor(props) {
