@@ -73,7 +73,10 @@ export default function Home(props) {
 					<Typography variant="h1">Theme</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("How theme works")}} startIcon={<Style />}>How theme works</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("How theme works")}} startIcon={<Style />}>How theme works</Button>
+				</Grid>
+				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("HomePage")}} startIcon={<Style />}>HomePage</Button>
 				</Grid>
 			</Grid>
 			<Grid container spacing={0}>
@@ -81,37 +84,37 @@ export default function Home(props) {
 					<Typography variant="h1">Inputs</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Button")}} startIcon={<TouchApp />}>Button</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Button")}} startIcon={<TouchApp />}>Button</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Button Group")}} startIcon={<GroupWork />}>Button Group</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Button Group")}} startIcon={<GroupWork />}>Button Group</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Checkbox")}} startIcon={<CheckBox />}>Checkbox</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Checkbox")}} startIcon={<CheckBox />}>Checkbox</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Floating Action Button")}} startIcon={<TouchApp />}>Floating Action Button</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Floating Action Button")}} startIcon={<TouchApp />}>Floating Action Button</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Date / Time")}} startIcon={<DateRange />}>Date / Time</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Date / Time")}} startIcon={<DateRange />}>Date / Time</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Radio")}} startIcon={<RadioButtonChecked />}>Radio</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Radio")}} startIcon={<RadioButtonChecked />}>Radio</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Select")}} startIcon={<SelectAll />}>Select</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Select")}} startIcon={<SelectAll />}>Select</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Slider")}} startIcon={<Tune />}>Slider</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Slider")}} startIcon={<Tune />}>Slider</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Switch")}} startIcon={<ToggleOn />}>Switch</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Switch")}} startIcon={<ToggleOn />}>Switch</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Text Field")}} startIcon={<Textsms />}>Text Field</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Text Field")}} startIcon={<Textsms />}>Text Field</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Transfer List")}} startIcon={<List />}>Transfer List</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Transfer List")}} startIcon={<List />}>Transfer List</Button>
 				</Grid>
 			</Grid>
 			<Grid container spacing={0}>
@@ -119,25 +122,25 @@ export default function Home(props) {
 					<Typography variant="h1">Navigation</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Bottom Navigation")}} startIcon={<Navigation />}>Bottom Navigation</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Bottom Navigation")}} startIcon={<Navigation />}>Bottom Navigation</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Breadcrumbs")}} startIcon={<NavigateNext />}>Breadcrumbs</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Breadcrumbs")}} startIcon={<NavigateNext />}>Breadcrumbs</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Drawer")}} startIcon={<GetApp />}>Drawer</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Drawer")}} startIcon={<GetApp />}>Drawer</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Link")}} startIcon={<Link />}>Link</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Link")}} startIcon={<Link />}>Link</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Menu")}} startIcon={<Menu />}>Menu</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Menu")}} startIcon={<Menu />}>Menu</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Stepper")}} startIcon={<Eject />}>Stepper</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Stepper")}} startIcon={<Eject />}>Stepper</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Tabs")}} startIcon={<Tab />}>Tabs</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Tabs")}} startIcon={<Tab />}>Tabs</Button>
 				</Grid>
 			</Grid>
 			<Grid container spacing={0}>
@@ -145,10 +148,10 @@ export default function Home(props) {
 					<Typography variant="h1">Surfaces</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Card")}} startIcon={<ViewCarousel />}>Card</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Card")}} startIcon={<ViewCarousel />}>Card</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Accordion")}} startIcon={<ExpandMore />}>Accordion</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Accordion")}} startIcon={<ExpandMore />}>Accordion</Button>
 				</Grid>
 			</Grid>
 			<Grid container spacing={0}>
@@ -156,16 +159,16 @@ export default function Home(props) {
 					<Typography variant="h1">Feedback</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Progress")}} startIcon={<Autorenew />}>Progress</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Progress")}} startIcon={<Autorenew />}>Progress</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Dialog")}} startIcon={<WebAsset />}>Dialog</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Dialog")}} startIcon={<WebAsset />}>Dialog</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Snackbar")}} startIcon={<Web />}>Snackbar</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Snackbar")}} startIcon={<Web />}>Snackbar</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Backdrop")}} startIcon={<Cached />}>Backdrop</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Backdrop")}} startIcon={<Cached />}>Backdrop</Button>
 				</Grid>
 			</Grid>
 			<Grid container spacing={0}>
@@ -173,31 +176,31 @@ export default function Home(props) {
 					<Typography variant="h1">Data Display</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Avatar")}} startIcon={<AccountCircle />}>Avatar</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Avatar")}} startIcon={<AccountCircle />}>Avatar</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Badge")}} startIcon={<More />}>Badge</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Badge")}} startIcon={<More />}>Badge</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Chip")}} startIcon={<LocalOffer />}>Chip</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Chip")}} startIcon={<LocalOffer />}>Chip</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Divider")}} startIcon={<Remove />}>Divider</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Divider")}} startIcon={<Remove />}>Divider</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Material Icons")}} startIcon={<Apps />}>Material Icons</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Material Icons")}} startIcon={<Apps />}>Material Icons</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("List")}} startIcon={<List />}>List</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("List")}} startIcon={<List />}>List</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Table")}} startIcon={<TableChart />}>Table</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Table")}} startIcon={<TableChart />}>Table</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Tooltip")}} startIcon={<AccountBalanceWallet />}>Tooltip</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Tooltip")}} startIcon={<AccountBalanceWallet />}>Tooltip</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Typography")}} startIcon={<Spellcheck />}>Typography</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Typography")}} startIcon={<Spellcheck />}>Typography</Button>
 				</Grid>
 			</Grid>
 			<Grid container spacing={0}>
@@ -205,16 +208,16 @@ export default function Home(props) {
 					<Typography variant="h1">Utils</Typography>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Click Away Listener")}} startIcon={<Hearing />}>Click Away Listener</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Click Away Listener")}} startIcon={<Hearing />}>Click Away Listener</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Popover")}} startIcon={<TableChart />}>Popover</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Popover")}} startIcon={<TableChart />}>Popover</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Textarea Autosize")}} startIcon={<Description />}>Textarea Autosize</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Textarea Autosize")}} startIcon={<Description />}>Textarea Autosize</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Transitions")}} startIcon={<Flare />}>Transitions</Button>
+					<Button className={classes.optionButton} variant="contained" color="primary" onClick={ () => {props.onSelection("Transitions")}} startIcon={<Flare />}>Transitions</Button>
 				</Grid>
 			</Grid>
 			<Grid container spacing={0}>

@@ -8,12 +8,7 @@ let theme = createMuiTheme({
 		dark: '#00233e',
 		contrastText: '#ffffff',
 	  },
-	  secondary: {
-		light: '#987d5b',
-		main: '#695131',
-		dark: '#3c2909',
-		contrastText: '#ffffff',
-	  },
+	 
 	  warning:{
 		light: '#ffb74d',
 		main: '#ff9800',

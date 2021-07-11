@@ -5,6 +5,7 @@ import Home from "./home";
 import ButtonExample from "./examples/buttonExample";
 import ContentMissing from "./examples/contentMissing";
 import HowThemeWorksExample from "./examples/howThemeWorksExample";
+import HomePage from "./homePage";
 
 //Theme
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -25,10 +26,13 @@ class Display extends Component {
 	}
 
 	renderDisplayMode(mode) {
-
+		console.log(mode);
 		switch (mode) {
 			case 'Home':
 				return <Home onSelection={this.changeDisplayMode} />
+
+			case 'HomePage':
+				return <HomePage onSelection={this.changeDisplayMode} />
 
 			case 'How theme works':
 				return <HowThemeWorksExample title={mode} onBackPress={this.changeDisplayMode} />
