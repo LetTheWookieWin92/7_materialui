@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBar from "../navigationBar";
 import ExampleSection from "./exampleSection";
-import { Typography, Grid, Button, ButtonGroup } from "@material-ui/core";
+import { Grid, Button, ButtonGroup } from "@material-ui/core";
 
 const ButtonGroupExample = ({ title, onBackPress }) => {
 	return (
