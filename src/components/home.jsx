@@ -90,7 +90,7 @@ export default function Home(props) {
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Checkbox")}} startIcon={<CheckBox />}>Checkbox</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
-					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Floating Action Button")}} startIcon={<TouchApp />}>Floating Action Button</Button>
+					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Fab")}} startIcon={<TouchApp />}>Floating Action Button</Button>
 				</Grid>
 				<Grid item xs={6} sm={6} md={4} lg={3} xl={2}>
 					<Button className={classes.optionButton} variant="contained" color="secondary" onClick={ () => {props.onSelection("Date / Time")}} startIcon={<DateRange />}>Date / Time</Button>

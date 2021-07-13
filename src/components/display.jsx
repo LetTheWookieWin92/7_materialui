@@ -7,6 +7,7 @@ import ButtonGroupExample from "./examples/buttonGroupExample";
 import ContentMissing from "./examples/contentMissing";
 import HowThemeWorksExample from "./examples/howThemeWorksExample";
 import CheckboxExample from "./examples/checkboxExample";
+import FabExample from "./examples/fabExample";
 
 //Theme
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -55,6 +56,14 @@ class Display extends Component {
 			case "Checkbox":
 				return (
 					<CheckboxExample
+						title={mode}
+						onBackPress={this.changeDisplayMode}
+					/>
+				);
+
+			case "Fab":
+				return (
+					<FabExample
 						title={mode}
 						onBackPress={this.changeDisplayMode}
 					/>
